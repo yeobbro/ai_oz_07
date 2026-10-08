@@ -1,2 +1,3 @@
 # ai_oz_07
-codingschool
+##codingschool
+-healthcare&data
