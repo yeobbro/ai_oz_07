@@ -1,0 +1,616 @@
+body {
+    text-align: left;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 0 0 0 200px;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+a {
+    color: inherit;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 40px;
+}
+
+.sidebar-container {
+    padding: 0 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    color: #16a085;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    min-height: calc(100vh - 80px);
+}
+
+#resume-header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#resume-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    color: #222;
+}
+
+#resume-header span {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+#resume-header i {
+    color: #555;
+    width: 20px;
+}
+
+main h2 {
+    font-size: 1.5em;
+    border-left: 5px solid #333;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+section {
+    margin-bottom: 38px;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.experience-info .company {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #222;
+}
+
+.experience-info .period {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.experience-item .role {
+    margin-bottom: 10px;
+}
+
+.experience-item .position {
+    font-weight: 600;
+    color: #555;
+}
+
+.experience-item .rank {
+    font-weight: 500;
+    color: #888;
+    font-size: 0.9em;
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #ddd;
+}
+
+.experience-item .details,
+.project-card .details {
+    margin: 0;
+    padding-left: 20px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.experience-item .details li,
+.project-card .details li {
+    margin-bottom: 5px;
+}
+
+#introduce p {
+    color: #555;
+    font-size: 1.05em;
+    margin-bottom: 20px;
+    white-space: pre-line;
+}
+
+.skills-group {
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.skills-group h3 {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: #f0f2f5;
+    color: #476282;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    font-weight: 600;
+}
+
+.project {
+    margin-top: 15px;
+    padding-left: 10px;
+    border-left: 2px solid #eee;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.project-name {
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.project-period {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.education-table th {
+    text-align: left;
+    width: 150px;
+    color: #888;
+    font-weight: 400;
+    font-size: 0.9em;
+    padding: 10px 0;
+}
+
+.education-table td {
+    padding: 10px 0;
+    color: #444;
+    font-weight: 500;
+}
+
+.header-text a {
+    font-size: 1em;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-text a:hover {
+    text-decoration: underline;
+}
+
+/* Header refinement */
+.header-label {
+    margin: 0 0 5px;
+    color: #117864;
+    font-size: 0.75em;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.header-subtitle {
+    margin: 0 0 18px;
+    color: #777;
+    font-size: 1em;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 0;
+}
+
+.contact-list span {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Project cards and WORIT logo */
+.project-card {
+    margin: 0 0 24px;
+    padding: 23px;
+    border: 1px solid #e7e9ec;
+    border-radius: 12px;
+    background: #fff;
+    break-inside: avoid;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    border-color: #c7e3dc;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+}
+
+.worit-card {
+    border-top: 3px solid #16a085;
+}
+
+.project-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.project-category {
+    color: #888;
+    font-size: 0.72em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.status-badge {
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: #e8f7f3;
+    color: #117864;
+    font-size: 0.72em;
+    font-weight: 700;
+}
+
+.status-badge.planning {
+    background: #f0f2f5;
+    color: #5f6875;
+}
+
+.worit-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 17px;
+}
+
+.worit-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.worit-logo {
+    display: block;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.worit-title h3,
+.project-title-block h3 {
+    margin: 0;
+    color: #222;
+    font-size: 1.55em;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.worit-title p,
+.project-subtitle {
+    margin: 3px 0 0;
+    color: #888;
+    font-size: 0.82em;
+}
+
+.project-title-block h3 {
+    font-size: 1.35em;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: #fff;
+    color: #444;
+    font-size: 0.82em;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.project-link:hover {
+    border-color: #16a085;
+    color: #117864;
+    background: #f1faf7;
+}
+
+.project-link.primary-link {
+    border-color: #16a085;
+    background: #16a085;
+    color: #fff;
+}
+
+.project-link.primary-link:hover {
+    border-color: #117864;
+    background: #117864;
+    color: #fff;
+}
+
+.project-description {
+    margin: 16px 0 20px;
+    color: #555;
+    font-size: 0.97em;
+    line-height: 1.85;
+}
+
+.project-card h4 {
+    margin: 20px 0 9px;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.project-meta {
+    display: grid;
+    gap: 16px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #eee;
+}
+
+.meta-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #888;
+    font-size: 0.72em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.project-meta p {
+    margin: 0 0 4px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.resume-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.resume-footer p {
+    color: #777;
+    font-size: 0.85em;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: #117864;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    body {
+        padding-left: 0;
+        padding-top: 65px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px 12px;
+    }
+
+    .sidebar-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 24px 18px;
+        border-radius: 0;
+    }
+
+    #resume-header h1 {
+        font-size: 2em;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contact-list span {
+        margin-right: 0;
+    }
+
+    .experience-info {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .project-card {
+        padding: 17px;
+    }
+
+    .worit-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .worit-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .project-actions {
+        width: 100%;
+    }
+
+    .project-actions .project-link {
+        flex: 1;
+    }
+
+    .education-table th {
+        width: 115px;
+    }
+}
+
+/* Print / Save as PDF */
+@page {
+    size: A4;
+    margin: 12mm;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: #fff;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .sidebar {
+        display: none !important;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .project-card,
+    .experience-item {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    .project-card:hover {
+        box-shadow: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
