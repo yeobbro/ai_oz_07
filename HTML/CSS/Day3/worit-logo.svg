@@ -1,0 +1,10 @@
+<svg width="520" height="128" viewBox="0 0 520 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">WORIT</title>
+  <desc id="desc">WORIT — Is it worth it?</desc>
+  <g fill="#252831" font-family="Arial, Helvetica, sans-serif" font-weight="800">
+    <text x="8" y="76" font-size="72" letter-spacing="-5">WORIT</text>
+  </g>
+  <circle cx="256" cy="17" r="7" fill="#F06449"/>
+  <rect x="300" y="97" width="62" height="2" rx="1" fill="#DFA15C" opacity=".8"/>
+  <text x="10" y="102" fill="#62666f" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" letter-spacing="2.8">IS IT WORTH IT?</text>
+</svg>
