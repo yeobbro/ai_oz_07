@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>암호화폐 가격 변동 추적기</title>
+    <link rel="stylesheet" href="cryptocurrency_style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">CRYPTO MARKET</p>
+            <h1>실시간 암호화폐 가격 변동 추적기</h1>
+            <p class="subtitle">USDT 마켓의 가격과 24시간 변동률을 한눈에 확인하세요.</p>
+        </header>
+
+        <section class="market-summary" aria-label="시장 정보">
+            <div class="summary-card">
+                <span class="summary-label">표시 중인 코인</span>
+                <strong id="coinCount">-</strong>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">마지막 업데이트</span>
+                <strong id="lastUpdated">불러오는 중...</strong>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">새로고침 주기</span>
+                <strong>1초</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="toolbar">
+                <div class="tabs" role="tablist" aria-label="코인 목록 보기">
+                    <button id="allTab" class="tab-btn active" type="button" role="tab" aria-selected="true">전체보기</button>
+                    <button id="favoritesTab" class="tab-btn" type="button" role="tab" aria-selected="false">관심항목 <span id="favoriteCount">0</span></button>
+                </div>
+                <label class="search-container">
+                    <span class="sr-only">암호화폐 심볼 검색</span>
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input type="search" id="searchInput" placeholder="심볼 검색 (예: BTCUSDT)" autocomplete="off">
+                </label>
+            </div>
+
+            <div id="loading" class="loading">
+                <span class="spinner" aria-hidden="true"></span>
+                <span>데이터를 불러오는 중입니다...</span>
+            </div>
+            <div id="errorMessage" class="error-message hidden" role="alert"></div>
+
+            <div class="table-wrap">
+                <table id="cryptoTable" class="hidden">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="favorite-heading">관심</th>
+                            <th scope="col">심볼</th>
+                            <th scope="col" class="numeric">현재가 (USDT)</th>
+                            <th scope="col" class="numeric">24시간 변동률</th>
+                            <th scope="col" class="numeric">24시간 최고가</th>
+                            <th scope="col" class="numeric">24시간 최저가</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cryptoList"></tbody>
+                </table>
+            </div>
+            <div id="emptyMessage" class="empty-message hidden">표시할 코인이 없습니다.</div>
+            <footer class="panel-footer">
+                <span><span class="live-dot"></span> Binance API 데이터</span>
+                <span>관심항목은 이 브라우저에 저장됩니다.</span>
+            </footer>
+        </section>
+        <p class="disclaimer">가격 정보는 참고용이며, 실제 거래 가격과 차이가 있을 수 있습니다.</p>
+    </main>
+    <script src="cryptocurrency.js"></script>
+</body>
+</html>
